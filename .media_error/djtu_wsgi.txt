@@ -1,0 +1,68 @@
+[Sat Feb 15 06:55:00.657722 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046] mod_wsgi (pid=3546): Failed to exec Python script file '/home/djtu/django_project/django_project/wsgi.py'.
+[Sat Feb 15 06:55:00.658894 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046] mod_wsgi (pid=3546): Exception occurred processing WSGI script '/home/djtu/django_project/django_project/wsgi.py'.
+[Sat Feb 15 06:55:00.659151 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046] Traceback (most recent call last):
+[Sat Feb 15 06:55:00.659254 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/django_project/wsgi.py", line 16, in <module>
+[Sat Feb 15 06:55:00.659291 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     application = get_wsgi_application()
+[Sat Feb 15 06:55:00.659319 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Sat Feb 15 06:55:00.659324 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     django.setup(set_prefix=False)
+[Sat Feb 15 06:55:00.659331 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/__init__.py", line 19, in setup
+[Sat Feb 15 06:55:00.659335 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Sat Feb 15 06:55:00.659341 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/conf/__init__.py", line 76, in __getattr__
+[Sat Feb 15 06:55:00.659346 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     self._setup(name)
+[Sat Feb 15 06:55:00.659351 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/conf/__init__.py", line 63, in _setup
+[Sat Feb 15 06:55:00.659355 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     self._wrapped = Settings(settings_module)
+[Sat Feb 15 06:55:00.659361 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/conf/__init__.py", line 142, in __init__
+[Sat Feb 15 06:55:00.659365 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Sat Feb 15 06:55:00.659371 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[Sat Feb 15 06:55:00.659375 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     return _bootstrap._gcd_import(name[level:], package, level)
+[Sat Feb 15 06:55:00.659392 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[Sat Feb 15 06:55:00.659398 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[Sat Feb 15 06:55:00.659404 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[Sat Feb 15 06:55:00.659409 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[Sat Feb 15 06:55:00.659415 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[Sat Feb 15 06:55:00.659420 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Sat Feb 15 06:55:00.659426 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/home/djtu/django_project/django_project/settings.py", line 17, in <module>
+[Sat Feb 15 06:55:00.659430 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     config = json.load(config_file)
+[Sat Feb 15 06:55:00.659435 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/usr/lib/python3.7/json/__init__.py", line 296, in load
+[Sat Feb 15 06:55:00.659439 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+[Sat Feb 15 06:55:00.659444 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/usr/lib/python3.7/json/__init__.py", line 348, in loads
+[Sat Feb 15 06:55:00.659448 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     return _default_decoder.decode(s)
+[Sat Feb 15 06:55:00.659453 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/usr/lib/python3.7/json/decoder.py", line 337, in decode
+[Sat Feb 15 06:55:00.659457 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+[Sat Feb 15 06:55:00.659462 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]   File "/usr/lib/python3.7/json/decoder.py", line 353, in raw_decode
+[Sat Feb 15 06:55:00.659466 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046]     obj, end = self.scan_once(s, idx)
+[Sat Feb 15 06:55:00.659484 2020] [wsgi:error] [pid 3546:tid 140028878067456] [remote 121.131.97.11:50046] json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 6 column 1 (char 130)
+[Sat Feb 15 06:55:00.850305 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045] mod_wsgi (pid=3546): Failed to exec Python script file '/home/djtu/django_project/django_project/wsgi.py'.
+[Sat Feb 15 06:55:00.850350 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045] mod_wsgi (pid=3546): Exception occurred processing WSGI script '/home/djtu/django_project/django_project/wsgi.py'.
+[Sat Feb 15 06:55:00.850563 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045] Traceback (most recent call last):
+[Sat Feb 15 06:55:00.850634 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/django_project/wsgi.py", line 16, in <module>
+[Sat Feb 15 06:55:00.850639 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     application = get_wsgi_application()
+[Sat Feb 15 06:55:00.850646 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Sat Feb 15 06:55:00.850663 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     django.setup(set_prefix=False)
+[Sat Feb 15 06:55:00.850683 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/__init__.py", line 19, in setup
+[Sat Feb 15 06:55:00.850687 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Sat Feb 15 06:55:00.850693 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/conf/__init__.py", line 76, in __getattr__
+[Sat Feb 15 06:55:00.850697 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     self._setup(name)
+[Sat Feb 15 06:55:00.850702 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/conf/__init__.py", line 63, in _setup
+[Sat Feb 15 06:55:00.850706 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     self._wrapped = Settings(settings_module)
+[Sat Feb 15 06:55:00.850711 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/venv/lib/python3.7/site-packages/django/conf/__init__.py", line 142, in __init__
+[Sat Feb 15 06:55:00.850715 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Sat Feb 15 06:55:00.850721 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+[Sat Feb 15 06:55:00.850724 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     return _bootstrap._gcd_import(name[level:], package, level)
+[Sat Feb 15 06:55:00.850730 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+[Sat Feb 15 06:55:00.850735 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+[Sat Feb 15 06:55:00.850741 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+[Sat Feb 15 06:55:00.850747 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+[Sat Feb 15 06:55:00.850752 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+[Sat Feb 15 06:55:00.850758 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Sat Feb 15 06:55:00.850763 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/home/djtu/django_project/django_project/settings.py", line 17, in <module>
+[Sat Feb 15 06:55:00.850767 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     config = json.load(config_file)
+[Sat Feb 15 06:55:00.850772 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/usr/lib/python3.7/json/__init__.py", line 296, in load
+[Sat Feb 15 06:55:00.850776 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+[Sat Feb 15 06:55:00.850781 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/usr/lib/python3.7/json/__init__.py", line 348, in loads
+[Sat Feb 15 06:55:00.850785 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     return _default_decoder.decode(s)
+[Sat Feb 15 06:55:00.850794 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/usr/lib/python3.7/json/decoder.py", line 337, in decode
+[Sat Feb 15 06:55:00.850798 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+[Sat Feb 15 06:55:00.850803 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]   File "/usr/lib/python3.7/json/decoder.py", line 353, in raw_decode
+[Sat Feb 15 06:55:00.850807 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045]     obj, end = self.scan_once(s, idx)
+[Sat Feb 15 06:55:00.850824 2020] [wsgi:error] [pid 3546:tid 140028760569600] [remote 121.131.97.11:50045] json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 6 column 1 (char 130)
