@@ -27,6 +27,7 @@ Pillow==7.0.0
 post==2019.4.13
 powerline-status==2.7
 psycopg2==2.8.5
+psycopg2-binary==2.8.5
 public==2019.4.13
 pygame==2.0.0.dev6
 python-dateutil==2.8.1
