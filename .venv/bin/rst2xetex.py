@@ -1,4 +1,4 @@
-#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_project/.venv/bin/python
+#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_with_heroku/.venv/bin/python
 
 # $Id: rst2xetex.py 7847 2015-03-17 17:30:47Z milde $
 # Author: Guenter Milde

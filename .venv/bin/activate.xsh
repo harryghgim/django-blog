@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_project/.venv"
+$VIRTUAL_ENV = r"/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_with_heroku/.venv"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

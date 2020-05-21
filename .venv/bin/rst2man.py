@@ -1,4 +1,4 @@
-#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_project/.venv/bin/python
+#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_with_heroku/.venv/bin/python
 
 # Author: 
 # Contact: grubert@users.sf.net

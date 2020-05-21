@@ -1,4 +1,4 @@
-#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_project/.venv/bin/python
+#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_with_heroku/.venv/bin/python
 # -*- coding: utf8 -*-
 # :Copyright: © 2015 Günter Milde.
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:
