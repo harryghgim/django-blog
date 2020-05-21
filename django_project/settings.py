@@ -33,8 +33,8 @@ ALLOWED_HOSTS = ['my-sweet-django-web.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'blog',
-    'users',
+    'blog.apps.BlogConfig',
+    'users.apps.UsersCOnfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
