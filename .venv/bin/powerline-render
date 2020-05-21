@@ -1,4 +1,4 @@
-#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_project/.venv/bin/python
+#!/Users/gwanghyeongim/Documents/py/coreyMS_pj/django_with_heroku/.venv/bin/python
 # vim:fileencoding=utf-8:noet
 
 from __future__ import (unicode_literals, division, absolute_import, print_function)
