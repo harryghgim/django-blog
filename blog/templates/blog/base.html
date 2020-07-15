@@ -13,22 +13,22 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
-        <title>Gwanghyeon's Django Blog - {{ title }}</title>
+        <title>Harry's den - {{ title }}</title>
     {% else %}
-        <title>Gwanghyeon's Django Blog</title>
+        <title>Harry's den</title>
     {% endif %}
     <meta property="og:image" content="{% static 'blog/django-logo.jpg' %}"> 
     <meta property="og:image:width" content="800"/>
     <meta property="og:image:height" content="400"/> 
-    <meta property="og:description" content="My website made with Django 😎"/> 
-    <meta property="og:title" content="Gwanghyeon's Django Blog"/> 
+    <meta property="og:description" content="A website made with Django"/> 
+    <meta property="og:title" content="Harry's den"/> 
 
 </head>
 <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>
+          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Harry's den</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
