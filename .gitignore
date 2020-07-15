@@ -12,6 +12,7 @@ __pycache__/
 .env
 .venv/
 
+.python-version
 .DS_Store
 
 posts.json
