@@ -25,6 +25,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# If False, web site won't run locally, returning  500 message
+# set True to make it running locally
 DEBUG = False
 
 ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', '127.0.0.1']
@@ -80,12 +82,13 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# Not used
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#             }
+# }
 
 
 # Password validation
@@ -161,3 +164,7 @@ SESSION_COOKIE_SECURE = True
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
+
+# Use heroku psql db locally
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
