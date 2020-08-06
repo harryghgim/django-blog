@@ -10,6 +10,8 @@ from django.views.generic import (
 )
 from .models import Post
 
+from markdownx.utils import markdownify
+
 def home(request):
     context = {
         'posts': Post.objects.all()

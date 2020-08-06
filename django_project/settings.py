@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages'
+    'storages',
+    'markdownx',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+# set STATIC_ROOT to run python manage.py collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -158,6 +160,7 @@ AWS_S3_REGION_NAME = "ap-northeast-2"
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+# set both False to make web site run locally 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
@@ -168,3 +171,13 @@ django_heroku.settings(locals())
 # Use heroku psql db locally
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# django-markdownx setting
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'extra',
+    'fenced_code',
+    'sane_lists',
+    'nl2br',
+    'codehilite',
+]
+MARKDOWNX_EDITOR_RESIZABLE = True
