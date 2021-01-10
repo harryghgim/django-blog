@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # If False, web site won't run locally, returning  500 message
 # set True to make it running locally
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', '127.0.0.1']
 
@@ -161,8 +161,8 @@ AWS_S3_REGION_NAME = "ap-northeast-2"
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # set both False to make web site run locally 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 # Configure Django App for Heroku.
 import django_heroku
