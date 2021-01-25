@@ -9,14 +9,34 @@
         {{ form|crispy }}
       </fieldset>
       <div class="form-group">
-        <button class="btn btn-outline-info" type="submit">Post</button>
+        <button id="post_btn" class="btn btn-outline-info" type="submit">Post</button>
       </div>
     </form>
     {{ form.media }}
   </div>
   <script>
-    window.onbeforeunload = function() {
-      return true;
-    };
+    // window.onbeforeunload = function() {
+    //   return true;
+    // };
+    // let formChanged = false;
+    // window.addEventListener('beforeunload', (event) => {
+    //   event.preventDefault();
+    //   event.returnValue = '';
+    // })
+    // let myForm = document.querySelector('#post_form');
+    // myForm.addEventListener('change', () => formChanged = true);
+
+    // https://dev.to/chromiumdev/sure-you-want-to-leavebrowser-beforeunload-event-4eg5
+
+    let isPosted = false;
+    let postBtn = document.querySelector('#post_btn')
+    postBtn.addEventListener('click', () => isPosted = true);
+    window.addEventListener('beforeunload', (event) => {
+      if (!isPosted) {
+        // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
+        event.preventDefault();
+        event.returnValue = '';
+      }      
+    })
   </script>
 {% endblock content %}
