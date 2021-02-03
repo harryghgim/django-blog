@@ -1,11 +1,11 @@
 body {
   background: #fafafa;
-  color: #333333;
+  color: #343a40;
   margin-top: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #343a40;
 }
 
 ul {
@@ -13,7 +13,8 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  /* background-color: #5f788a; */
+  background-color:#343a40
 }
 
 .site-header .navbar-nav .nav-link {
@@ -37,7 +38,7 @@ ul {
 }
 
 .article-title {
-  color: #444444;
+  color: #343a40;
 }
 
 a.article-title:hover {
