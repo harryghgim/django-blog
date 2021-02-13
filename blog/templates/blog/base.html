@@ -10,9 +10,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
-    <!-- use pygments default style to hilight code -->
+    <!-- github style markdown css. https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css-->
+    <link rel="stylesheet" href="{% static 'blog/github-markdown.css' %}">
+
+    <!-- code highlight. https://github.com/richleland/pygments-css -->
     <link rel="stylesheet" type="text/css" href="{% static 'blog/default.css'%}">
+
+    <!-- my cssfile -->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
     <title>Harry's den - {{ title }}</title>

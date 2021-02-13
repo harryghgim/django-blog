@@ -12,6 +12,10 @@ ul {
   margin: 0;
 }
 
+code {
+  color: inherit;
+}
+
 .bg-steel {
   /* background-color: #5f788a; */
   background-color:#343a40
@@ -46,9 +50,9 @@ a.article-title:hover {
   text-decoration: none;
 }
 
-.article-content {
+/* .article-content {
   white-space: pre-line;
-}
+} */
 
 .article-img {
   height: 65px;

@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-  <div class="content-section">
+  <div class="content-section markdown-body">
     <form method="POST">
       {% csrf_token %}
       <fieldset class="form-group">
@@ -15,21 +15,8 @@
     {{ form.media }}
   </div>
   <script>
-    // window.onbeforeunload = function() {
-    //   return true;
-    // };
-    // let formChanged = false;
-    // window.addEventListener('beforeunload', (event) => {
-    //   event.preventDefault();
-    //   event.returnValue = '';
-    // })
-    // let myForm = document.querySelector('#post_form');
-    // myForm.addEventListener('change', () => formChanged = true);
-
-    // https://dev.to/chromiumdev/sure-you-want-to-leavebrowser-beforeunload-event-4eg5
-
     let isPosted = false;
-    let postBtn = document.querySelector('#post_btn')
+    const postBtn = document.querySelector('#post_btn')
     postBtn.addEventListener('click', () => isPosted = true);
     window.addEventListener('beforeunload', (event) => {
       if (!isPosted) {

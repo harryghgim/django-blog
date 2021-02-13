@@ -35,17 +35,22 @@ ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', 'harrygh
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # apps
+    'blog',
+    'users',
+
+    # third party
     'crispy_forms',
     'storages',
     'markdownx',
+
 ]
 
 MIDDLEWARE = [
@@ -167,10 +172,8 @@ DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True
 # django-markdownx setting
 MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'extra',
-    'fenced_code',
-    'sane_lists',
-    'nl2br',
     'codehilite',
-    'footnotes'
+    'nl2br',
+    'sane_lists',
 ]
 MARKDOWNX_EDITOR_RESIZABLE = True
