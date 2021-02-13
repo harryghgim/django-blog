@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # set True to make it running locally
 DEBUG = False
 
-ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', 'harryghgim.dev']
 
 
 # Application definition
@@ -37,13 +37,13 @@ ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', '127.0.0
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'storages',
     'markdownx',
 ]
@@ -171,5 +171,6 @@ MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'sane_lists',
     'nl2br',
     'codehilite',
+    'footnotes'
 ]
 MARKDOWNX_EDITOR_RESIZABLE = True
