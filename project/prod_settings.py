@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # set True to make it running locally
 DEBUG = False
 
-ALLOWED_HOSTS = ['myawsdjapp.com', 'my-sweet-django-web.herokuapp.com', 'harryghgim.dev']
+ALLOWED_HOSTS = ['my-sweet-django-web.herokuapp.com', 'harryghgim.dev']
 
 
 # Application definition
