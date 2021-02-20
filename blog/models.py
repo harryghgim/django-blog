@@ -10,7 +10,8 @@ from markdownx.utils import markdownify
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = MarkdownxField()
-    date_posted = models.DateTimeField(default=timezone.now)
+    created_at = models.DateTimeField(auto_now_add=True) 
+    updated_at = models.DateTimeField(auto_now=True) # use my local time as defined in prod_settings.py
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
 
     def __str__(self):
