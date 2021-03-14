@@ -41,11 +41,23 @@ class UserPostListView(ListView):
         return Post.objects.filter(author=user).order_by('-created_at')
 
 class PostDetailView(DetailView):
+    """
+    CBV for each post.
+    """
     model = Post
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tags'] = self.object.tags.values('name')
+        print(context['tags'])
+        return context
+
 class PostCreateView(LoginRequiredMixin, CreateView):
+    """
+    CBV to create a single post
+    """
     model = Post
-    fields =['title', 'content']
+    fields =['title', 'content', 'tags']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -53,7 +65,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields =['title', 'content']
+    fields =['title', 'content', 'tags']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
