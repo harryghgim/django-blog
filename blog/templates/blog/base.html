@@ -35,7 +35,7 @@
 
     <!-- nav area -->
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand mr-4" href="{% url 'blog-landing' %}">Harry's den</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,6 +72,10 @@
       {% endif %}
       {% block content %}{% endblock %}
     </main>
+
+    <footer class="bg-dark">
+      <div class="container">harryghgim@gmail.com</div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,16 +1,40 @@
 {% extends "blog/base.html" %}
+{% load static %}
 {% block content %}
-<p>Hi. I'm Harry. I code with Python, Django, Javascript etc.</p>
-<p>I spent a lot of time learning from FreeCodeCamp, MDN, Stackoverflow and other official websites of programming
-  languages.
-</p>
-<p>This website is heavily inspired by <a target="_blank"
-    href="https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g">Corey M Schafer</a>. I added, subtracted, and changed some features to fit my own taste.</p>
-<p>Consider visiting my places below:</p>
-<ul>
-  <li><a href="https://github.com/harryghgim" target="_blank">Github</a></li>
-  <li><a href="https://www.freecodecamp.org/harryghgim" target="_blank">FreeCodeCamp</a></li>
-  <li><a href="https://stackoverflow.com/users/11790764/harryghgim?tab=profile" target="_blank">Stackoverflow</a></li>
-</ul>
+<div>
+  <!-- <h2>Introduction</h2> -->
+  <p><img class="profile img-thumbnail rounded mx-auto d-block" src="{% static 'blog/my_face.jpeg' %}" alt=""></p>
+  <p>Hi. I'm Harry. I code with Python, Django, Javascript etc.</p>
+  <p>I spent a lot of time learning from FreeCodeCamp, MDN, Stackoverflow and other official websites of programming
+    languages.
+  </p>
+  <p>This website is heavily inspired by <a target="_blank"
+      href="https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g">Corey M Schafer</a>. I added, subtracted, and
+    changed some features to fit my own taste. Thanks Corey!</p>
+  <p>Consider visiting my places below:</p>
+  <ul>
+    <li><a href="https://github.com/harryghgim" target="_blank">Github</a></li>
+    <li><a href="https://www.freecodecamp.org/harryghgim" target="_blank">FreeCodeCamp</a></li>
+    <li><a href="https://stackoverflow.com/users/11790764/harryghgim?tab=profile" target="_blank">Stackoverflow</a></li>
+  </ul>
+</div>
+<div>
+  <h2>Projects</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus fugiat atque, provident earum dignissimos
+    quos quasi veniam repellat necessitatibus accusamus asperiores ipsa laborum, molestiae nulla veritatis vero. Odit,
+    a.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus fugiat atque, provident earum dignissimos
+    quos quasi veniam repellat necessitatibus accusamus asperiores ipsa laborum, molestiae nulla veritatis vero. Odit,
+    a.</p>
+</div>
+
+<div>
+  <h2>Work Experience</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat vel velit omnis ipsam veritatis quibusdam cum
+    illum. Numquam magni esse hic ipsum, quo tempora labore quia. Dolor, consequuntur culpa!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus fugiat atque, provident earum dignissimos
+    quos quasi veniam repellat necessitatibus accusamus asperiores ipsa laborum, molestiae nulla veritatis vero. Odit,
+    a.</p>
+</div>
 
 {% endblock content %}
