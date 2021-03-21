@@ -12,15 +12,8 @@ from .models import Post
 
 from markdownx.utils import markdownify
 
-def home(request):
-    context = {
-        'posts': Post.objects.all()
-    }
-    return render(request, 'blog/home.html', context)
-
-def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
-
+def landing(request):
+    return render(request, 'blog/landing.html')
 
 class PostListView(ListView):
     model = Post
