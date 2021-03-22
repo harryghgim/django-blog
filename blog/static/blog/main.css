@@ -92,3 +92,23 @@ a.article-title:hover {
 .profile {
   width: 40%;
 }
+
+.projects span {  /* landing.html */
+    /* .badge  */
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+
+    /* .badge-dark */
+    color: #fff;
+    background-color: #343a40;
+
+    /* .mr-1 */
+    margin-right: .25rem!important;
+}
