@@ -1,86 +1,114 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- github style markdown css. https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css-->
-    <link rel="stylesheet" href="{% static 'blog/github-markdown.css' %}">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- code highlight. https://github.com/richleland/pygments-css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/default.css'%}">
+  <!-- github style markdown css. https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css-->
+  <link rel="stylesheet" href="{% static 'blog/github-markdown.css' %}">
 
-    <!-- my cssfile -->
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+  <!-- code highlight. https://github.com/richleland/pygments-css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/default.css'%}">
 
-    {% if title %}
-    <title>Harry's den - {{ title }}</title>
-    {% else %}
-    <title>Harry's den</title>
-    {% endif %}
-    <meta property="og:image" content="{% static 'blog/my_face.jpeg' %}">
-    <meta property="og:image:width" content="800"/>
-    <meta property="og:image:height" content="400"/>
-    <meta property="og:description" content="A website made with Django"/>
-    <meta property="og:title" content="Harry's den"/>
+  <!-- my cssfile -->
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
-  </head>
-  <body>
+  {% if title %}
+  <title>Harry's den - {{ title }}</title>
+  {% else %}
+  <title>Harry's den</title>
+  {% endif %}
+  <meta property="og:image" content="{% static 'blog/my_face.jpeg' %}">
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
+  <meta property="og:description" content="A website made with Django" />
+  <meta property="og:title" content="Harry's den" />
 
-    <!-- nav area -->
-    <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-landing' %}">Harry's den</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
-            </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-              {% if user.is_authenticated %}
-              <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
-              <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-              {% else %}
-              <!-- <a class="nav-item nav-link" href="{% url 'login' %}">Login</a> -->
-              <!-- <a class="nav-item nav-link" href="{% url 'register' %}">Register</a> -->
-              {% endif %}
-            </div>
+</head>
+
+<body>
+
+  <!-- nav area -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand mr-4" href="{% url 'blog-landing' %}">Harry's den</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+          aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
+          </div>
+          <!-- Navbar Right Side -->
+          <div class="navbar-nav">
+            {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+            <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <!-- <a class="nav-item nav-link" href="{% url 'login' %}">Login</a> -->
+            <!-- <a class="nav-item nav-link" href="{% url 'register' %}">Register</a> -->
+            {% endif %}
           </div>
         </div>
-      </nav>
-    </header>
-
-    <!-- article area -->
-    <main role="main" class="container col-md-10 col-lg-8">
-      {% if messages %}
-      {% for message in messages %}
-      <div class="alert alert-{{ message.tags }}">
-        {{ message }}
       </div>
-      {% endfor %}
-      {% endif %}
-      {% block content %}{% endblock %}
-    </main>
+    </nav>
+  </header>
 
-    <footer class="bg-dark">
-      <div class="container">harryghgim@gmail.com</div>
-    </footer>
+  <!-- article area -->
+  <main role="main" class="container col-md-10 col-lg-8">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  <footer class="bg-dark">
+    <div class="container mb-2">
+      <img class="icon" src="{% static 'blog/iconfinder_mail-letter-offer_2931172.png' %}"
+        alt="mail icon"><span>harryghgim@gmail.com</span>
+    </div>
+    <div class="container mb-2">
+      <img class="icon" src="{% static 'blog/iconfinder_Location_4200473.png' %}" alt="location"><span>Seoul, South
+        Korea</span>
+    </div>
+    <div class="container">
+      <!-- icon source https://www.iconfinder.com/ -->
+      <a href="https://github.com/harryghgim" target="_blank" rel="noopener noreferrer"><img class="icon"
+          src="{% static 'blog/iconfinder_github_317712.png' %}" alt="github icon"></a>
+      <a href="https://www.freecodecamp.org/harryghgim" target="_blank" rel="noopener noreferrer"><img class="icon"
+          src="{% static 'blog/iconfinder_freecodecamp_4691243.png' %}" alt="freecodecamp icon"></a>
+      <a href="https://stackoverflow.com/users/11790764/harryghgim?tab=profile" target="_blank"
+        rel="noopener noreferrer"><img class="icon" src="{% static 'blog/iconfinder_stackoverflow_1218159.png' %}"
+          alt="stackoverflow icon"></a>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>
