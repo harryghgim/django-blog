@@ -39,3 +39,10 @@ class Post(models.Model):
 
     class Meta:
         db_table = 'post'
+
+class Image(models.Model):
+    """
+    images with a single post
+    """
+    post = models.ForeignKey(Post, blank=True, null=True, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='postimages/')
