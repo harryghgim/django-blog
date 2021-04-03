@@ -1,10 +1,8 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<article class="media content-section">
-  <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+<article class="media content-section">  
   <div class="media-body">
     <div class="article-metadata">
-      <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
       <small class="text-muted">{{ object.created_at|date:"F d, Y" }}</small>
       {% if object.author == user %}
       <div>
@@ -15,6 +13,7 @@
     </div>
     <h2 class="article-title">{{ post.title }}</h2>
     <div class="article-content markdown-body">{{ post.formatted_markdown|safe }}</div>
+
     {% if post.tags %} <!-- list tags if tag exists -->
     <div class="my-3">
       {% for tag in tags %}
@@ -22,6 +21,7 @@
       {% endfor %}
     </div>
     {% endif %}
+    
   </div> 
 </article>
 {% endblock content %}
